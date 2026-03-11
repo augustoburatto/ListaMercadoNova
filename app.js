@@ -1,11 +1,12 @@
 const categoriasOrdem = ['Higiene', 'Mercearia', 'Congelados', 'Hortifruti'];
 const categoriaFallback = 'Outros';
+
 const categoriaSelect = document.getElementById('categoria');
 const listaBody = document.getElementById('lista-body');
 const totalGeral = document.getElementById('total-geral');
 const form = document.getElementById('item-form');
-const exportarBtn = document.getElementById('exportar');
-const importarInput = document.getElementById('importar');
+const salvarArquivoBtn = document.getElementById('salvar-arquivo');
+const saveStatus = document.getElementById('save-status');
 
 let itens = [];
 
@@ -37,16 +38,18 @@ function salvarLocal() {
   localStorage.setItem('listaMercadoNova', JSON.stringify(itens));
 }
 
+function statusSalvar(msg, erro = false) {
+  saveStatus.textContent = msg;
+  saveStatus.className = `save-status ${erro ? 'error' : 'ok'}`;
+}
+
 function atualizarTotalGeral() {
   const total = itens.reduce((acc, item) => acc + item.quantidade * item.valorUnitario, 0);
   totalGeral.textContent = formatarMoeda(total);
 }
 
 function atualizarItem(id, campo, valor) {
-  itens = itens.map((item) => {
-    if (item.id !== id) return item;
-    return { ...item, [campo]: valor };
-  });
+  itens = itens.map((item) => (item.id === id ? { ...item, [campo]: valor } : item));
   salvarLocal();
   renderizar();
 }
@@ -93,7 +96,6 @@ function renderizar() {
 
   for (const item of itensOrdenados) {
     const tr = document.createElement('tr');
-
     const tdNome = document.createElement('td');
     tdNome.textContent = item.nome;
 
@@ -136,6 +138,29 @@ function novoId() {
   return crypto.randomUUID ? crypto.randomUUID() : Date.now().toString();
 }
 
+function normalizarLista(lista) {
+  if (!Array.isArray(lista)) return [];
+  return lista.map((item) => ({
+    id: item.id || novoId(),
+    nome: String(item.nome || 'Item sem nome'),
+    quantidade: Number(item.quantidade || 0),
+    categoria: item.categoria || categoriaFallback,
+    valorUnitario: Number(item.valorUnitario || 0),
+    noCarrinho: Boolean(item.noCarrinho),
+  }));
+}
+
+function baixarListaMercadoJson() {
+  const blob = new Blob([JSON.stringify(itens, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'lista-mercado.json';
+  link.click();
+  URL.revokeObjectURL(url);
+  statusSalvar('Arquivo lista-mercado.json atualizado e baixado com sucesso.');
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const nome = document.getElementById('nome').value.trim();
@@ -145,56 +170,14 @@ form.addEventListener('submit', (event) => {
 
   if (!nome || quantidade <= 0 || valorUnitario < 0) return;
 
-  itens.push({
-    id: novoId(),
-    nome,
-    quantidade,
-    categoria,
-    valorUnitario,
-    noCarrinho: false,
-  });
-
+  itens.push({ id: novoId(), nome, quantidade, categoria, valorUnitario, noCarrinho: false });
   salvarLocal();
   form.reset();
   categoriaSelect.value = categoriasOrdem[0];
   renderizar();
 });
 
-exportarBtn.addEventListener('click', () => {
-  const blob = new Blob([JSON.stringify(itens, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'lista-mercado.json';
-  a.click();
-  URL.revokeObjectURL(url);
-});
-
-importarInput.addEventListener('change', async (event) => {
-  const file = event.target.files?.[0];
-  if (!file) return;
-  try {
-    const conteudo = await file.text();
-    const listaImportada = JSON.parse(conteudo);
-    if (!Array.isArray(listaImportada)) throw new Error('Formato inválido');
-
-    itens = listaImportada.map((item) => ({
-      id: item.id || novoId(),
-      nome: String(item.nome || 'Item sem nome'),
-      quantidade: Number(item.quantidade || 0),
-      categoria: item.categoria || categoriaFallback,
-      valorUnitario: Number(item.valorUnitario || 0),
-      noCarrinho: Boolean(item.noCarrinho),
-    }));
-
-    salvarLocal();
-    renderizar();
-  } catch {
-    alert('Não foi possível importar o arquivo JSON.');
-  } finally {
-    importarInput.value = '';
-  }
-});
+salvarArquivoBtn.addEventListener('click', baixarListaMercadoJson);
 
 async function carregarDadosIniciais() {
   preencherCategorias();
@@ -202,7 +185,7 @@ async function carregarDadosIniciais() {
 
   const local = localStorage.getItem('listaMercadoNova');
   if (local) {
-    itens = JSON.parse(local);
+    itens = normalizarLista(JSON.parse(local));
     renderizar();
     return;
   }
@@ -210,7 +193,7 @@ async function carregarDadosIniciais() {
   try {
     const resposta = await fetch('data/lista-mercado.json');
     if (!resposta.ok) throw new Error('Falha ao ler JSON inicial');
-    itens = await resposta.json();
+    itens = normalizarLista(await resposta.json());
   } catch {
     itens = [];
   }
