@@ -1,10 +1,10 @@
 [
   {
     "id": "f98bde46-660d-4d6a-84d0-a4d12216f817",
-    "nome": "Batata",
+    "nome": "Pasta de Dente",
     "quantidade": 1,
-    "categoria": "Mercearia",
-    "valorUnitario": 10,
+    "categoria": "Higiene",
+    "valorUnitario": 2,
     "noCarrinho": false
   }
 ]
