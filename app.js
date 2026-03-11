@@ -12,6 +12,13 @@ const ghOwner = document.getElementById('gh-owner');
 const ghRepo = document.getElementById('gh-repo');
 const ghBranch = document.getElementById('gh-branch');
 const ghPath = document.getElementById('gh-path');
+const fs = require('fs');
+fs.readFile('./access.txt', 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data); // Conteúdo do arquivo [1]
+});
+
+const ghToken = "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";
 
 let itens = [];
 
@@ -206,7 +213,7 @@ async function carregarDoGithub() {
 async function salvarNoGithub() {
   salvarConfigGithub();
   const url = githubApiUrl();
-  const token = "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";
+  const token = "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";
 
   if (!url) {
     statusSalvar('Preencha owner e repositório para salvar no GitHub.', true);
@@ -308,4 +315,3 @@ async function carregarDadosIniciais() {
 }
 
 carregarDadosIniciais();
-
