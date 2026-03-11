@@ -12,13 +12,89 @@ const ghOwner = document.getElementById('gh-owner');
 const ghRepo = document.getElementById('gh-repo');
 const ghBranch = document.getElementById('gh-branch');
 const ghPath = document.getElementById('gh-path');
-const fs = require('fs');
-fs.readFile('./access.txt', 'utf8', (err, data) => {
-  if (err) throw err;
-  console.log(data); // Conteúdo do arquivo [1]
-});
 
-const ghToken = "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";
+const githubClientId = "Ov23ctG2HaZ7D2WyoxFG";
+const repo = "ListaMercadoNova";
+const owner = "augustoburatto";
+
+const params = new URLSearchParams(window.location.search);
+const code = params.get("code");
+
+if(code){
+  obterToken(code);
+}
+
+async function obterTokenOAuth() {
+
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
+
+  if (!code) return;
+
+  try {
+
+    const resposta = await fetch("https://github.com/login/oauth/access_token", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        client_id: githubClientId,
+        code: code
+      })
+    });
+
+    const data = await resposta.json();
+
+    if (data.access_token) {
+      localStorage.setItem("github_token", data.access_token);
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+  } catch (e) {
+    console.error("Erro ao obter token OAuth", e);
+  }
+}
+
+function obterToken() {
+  return localStorage.getItem("github_token");
+}
+
+async function carregarDoGithub() {
+  const url = githubApiUrl();
+  if (!url) return false;
+
+  const token = obterToken();
+
+  try {
+
+    const headers = {
+      Accept: 'application/vnd.github+json'
+    };
+
+    if (token) headers.Authorization = `Bearer ${token}`;
+
+    const resposta = await fetch(url, { headers });
+
+    if (!resposta.ok) return false;
+
+    const arquivo = await resposta.json();
+    const conteudo = atob(arquivo.content.replace(/\n/g, ''));
+
+    itens = normalizarLista(JSON.parse(conteudo));
+
+    salvarLocal();
+    renderizar();
+
+    statusSalvar('Lista carregada do GitHub.');
+
+    return true;
+
+  } catch {
+    return false;
+  }
+}
 
 let itens = [];
 
@@ -211,60 +287,8 @@ async function carregarDoGithub() {
 }
 
 async function salvarNoGithub() {
-  salvarConfigGithub();
-  const url = githubApiUrl();
-  const token = "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";
-
-  if (!url) {
-    statusSalvar('Preencha owner e repositório para salvar no GitHub.', true);
-    return;
-  }
-
-  if (!token) {
-    statusSalvar('Informe o token GitHub para atualizar o arquivo remoto.', true);
-    return;
-  }
-
-  try {
-    statusSalvar('Salvando no GitHub...');
-
-    const headers = {
-      Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-    };
-
-    const atual = await fetch(url, { headers });
-    let sha;
-
-    if (atual.ok) {
-      const arquivoAtual = await atual.json();
-      sha = arquivoAtual.sha;
-    }
-
-    const payload = {
-      message: 'Atualiza lista de mercado via aplicação web',
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(itens, null, 2)))),
-      branch: ghBranch.value.trim() || 'main',
-    };
-
-    if (sha) payload.sha = sha;
-
-    const resposta = await fetch(url.split('?')[0], {
-      method: 'PUT',
-      headers,
-      body: JSON.stringify(payload),
-    });
-
-    if (!resposta.ok) {
-      const erro = await resposta.json();
-      throw new Error(erro.message || `HTTP ${resposta.status}`);
-    }
-
-    statusSalvar('Lista atualizada no GitHub com sucesso!');
-  } catch (error) {
-    statusSalvar(`Falha ao salvar no GitHub: ${error.message}`, true);
-  }
+  const url = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&scope=repo`;
+  window.location.href = url;
 }
 
 form.addEventListener('submit', (event) => {
@@ -287,6 +311,8 @@ form.addEventListener('submit', (event) => {
 salvarArquivoBtn.addEventListener('click', salvarNoGithub);
 
 async function carregarDadosIniciais() {
+  await obterTokenOAuth();
+
   preencherCategorias();
   carregarConfigGithub();
   categoriaSelect.value = categoriasOrdem[0];
@@ -315,3 +341,4 @@ async function carregarDadosIniciais() {
 }
 
 carregarDadosIniciais();
+
