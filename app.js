@@ -1,12 +1,18 @@
 const categoriasOrdem = ['Higiene', 'Mercearia', 'Congelados', 'Hortifruti'];
 const categoriaFallback = 'Outros';
+
 const categoriaSelect = document.getElementById('categoria');
 const listaBody = document.getElementById('lista-body');
 const totalGeral = document.getElementById('total-geral');
 const form = document.getElementById('item-form');
-const exportarBtn = document.getElementById('exportar');
-const importarBtn = document.getElementById('importarbtn');
-const importarInput = document.getElementById('importar');
+const salvarArquivoBtn = document.getElementById('salvar-arquivo');
+const saveStatus = document.getElementById('save-status');
+
+const ghOwner = document.getElementById('gh-owner');
+const ghRepo = document.getElementById('gh-repo');
+const ghBranch = document.getElementById('gh-branch');
+const ghPath = document.getElementById('gh-path');
+const ghToken = "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";
 
 let itens = [];
 
@@ -38,16 +44,38 @@ function salvarLocal() {
   localStorage.setItem('listaMercadoNova', JSON.stringify(itens));
 }
 
+function carregarConfigGithub() {
+  const config = JSON.parse(localStorage.getItem('listaMercadoNovaConfig') || '{}');
+  ghOwner.value = config.owner || 'augustoburatto';
+  ghRepo.value = config.repo || 'ListaMercadoNova';
+  ghBranch.value = config.branch || 'main';
+  ghPath.value = config.path || 'data/lista-mercado.json';
+}
+
+function salvarConfigGithub() {
+  localStorage.setItem(
+    'listaMercadoNovaConfig',
+    JSON.stringify({
+      owner: ghOwner.value.trim(),
+      repo: ghRepo.value.trim(),
+      branch: ghBranch.value.trim() || 'main',
+      path: ghPath.value.trim() || 'data/lista-mercado.json',
+    }),
+  );
+}
+
+function statusSalvar(msg, erro = false) {
+  saveStatus.textContent = msg;
+  saveStatus.className = `save-status ${erro ? 'error' : 'ok'}`;
+}
+
 function atualizarTotalGeral() {
   const total = itens.reduce((acc, item) => acc + item.quantidade * item.valorUnitario, 0);
   totalGeral.textContent = formatarMoeda(total);
 }
 
 function atualizarItem(id, campo, valor) {
-  itens = itens.map((item) => {
-    if (item.id !== id) return item;
-    return { ...item, [campo]: valor };
-  });
+  itens = itens.map((item) => (item.id === id ? { ...item, [campo]: valor } : item));
   salvarLocal();
   renderizar();
 }
@@ -94,7 +122,6 @@ function renderizar() {
 
   for (const item of itensOrdenados) {
     const tr = document.createElement('tr');
-
     const tdNome = document.createElement('td');
     tdNome.textContent = item.nome;
 
@@ -137,8 +164,106 @@ function novoId() {
   return crypto.randomUUID ? crypto.randomUUID() : Date.now().toString();
 }
 
+function normalizarLista(lista) {
+  if (!Array.isArray(lista)) return [];
+  return lista.map((item) => ({
+    id: item.id || novoId(),
+    nome: String(item.nome || 'Item sem nome'),
+    quantidade: Number(item.quantidade || 0),
+    categoria: item.categoria || categoriaFallback,
+    valorUnitario: Number(item.valorUnitario || 0),
+    noCarrinho: Boolean(item.noCarrinho),
+  }));
+}
+
+function githubApiUrl() {
+  const owner = ghOwner.value.trim();
+  const repo = ghRepo.value.trim();
+  const branch = encodeURIComponent(ghBranch.value.trim() || 'main');
+  const path = encodeURIComponent((ghPath.value.trim() || 'data/lista-mercado.json').replace(/^\//, ''));
+  if (!owner || !repo) return null;
+  return `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+}
+
+async function carregarDoGithub() {
+  const url = githubApiUrl();
+  if (!url) return false;
+
+  try {
+    const resposta = await fetch(url, { headers: { Accept: 'application/vnd.github+json' } });
+    if (!resposta.ok) return false;
+    const arquivo = await resposta.json();
+    const conteudo = atob(arquivo.content.replace(/\n/g, ''));
+    itens = normalizarLista(JSON.parse(conteudo));
+    salvarLocal();
+    renderizar();
+    statusSalvar('Lista carregada do GitHub.');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function salvarNoGithub() {
+  salvarConfigGithub();
+  const url = githubApiUrl();
+  const token = "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";
+
+  if (!url) {
+    statusSalvar('Preencha owner e repositório para salvar no GitHub.', true);
+    return;
+  }
+
+  if (!token) {
+    statusSalvar('Informe o token GitHub para atualizar o arquivo remoto.', true);
+    return;
+  }
+
+  try {
+    statusSalvar('Salvando no GitHub...');
+
+    const headers = {
+      Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    };
+
+    const atual = await fetch(url, { headers });
+    let sha;
+
+    if (atual.ok) {
+      const arquivoAtual = await atual.json();
+      sha = arquivoAtual.sha;
+    }
+
+    const payload = {
+      message: 'Atualiza lista de mercado via aplicação web',
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(itens, null, 2)))),
+      branch: ghBranch.value.trim() || 'main',
+    };
+
+    if (sha) payload.sha = sha;
+
+    const resposta = await fetch(url.split('?')[0], {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify(payload),
+    });
+
+    if (!resposta.ok) {
+      const erro = await resposta.json();
+      throw new Error(erro.message || `HTTP ${resposta.status}`);
+    }
+
+    statusSalvar('Lista atualizada no GitHub com sucesso!');
+  } catch (error) {
+    statusSalvar(`Falha ao salvar no GitHub: ${error.message}`, true);
+  }
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
+
   const nome = document.getElementById('nome').value.trim();
   const quantidade = Number(document.getElementById('quantidade').value);
   const categoria = categoriaSelect.value;
@@ -146,76 +271,35 @@ form.addEventListener('submit', (event) => {
 
   if (!nome || quantidade <= 0 || valorUnitario < 0) return;
 
-  itens.push({
-    id: novoId(),
-    nome,
-    quantidade,
-    categoria,
-    valorUnitario,
-    noCarrinho: false,
-  });
-
+  itens.push({ id: novoId(), nome, quantidade, categoria, valorUnitario, noCarrinho: false });
   salvarLocal();
   form.reset();
   categoriaSelect.value = categoriasOrdem[0];
   renderizar();
 });
 
-importarBtn.addEventListener('click', () => {
-  importarInput.click();
-});
-
-exportarBtn.addEventListener('click', () => {
-  const blob = new Blob([JSON.stringify(itens, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'lista-mercado.json';
-  a.click();
-  URL.revokeObjectURL(url);
-});
-
-importarInput.addEventListener('change', async (event) => {
-  const file = event.target.files?.[0];
-  if (!file) return;
-  try {
-    const conteudo = await file.text();
-    const listaImportada = JSON.parse(conteudo);
-    if (!Array.isArray(listaImportada)) throw new Error('Formato inválido');
-
-    itens = listaImportada.map((item) => ({
-      id: item.id || novoId(),
-      nome: String(item.nome || 'Item sem nome'),
-      quantidade: Number(item.quantidade || 0),
-      categoria: item.categoria || categoriaFallback,
-      valorUnitario: Number(item.valorUnitario || 0),
-      noCarrinho: Boolean(item.noCarrinho),
-    }));
-
-    salvarLocal();
-    renderizar();
-  } catch {
-    alert('Não foi possível importar o arquivo JSON.');
-  } finally {
-    importarInput.value = '';
-  }
-});
+salvarArquivoBtn.addEventListener('click', salvarNoGithub);
 
 async function carregarDadosIniciais() {
   preencherCategorias();
+  carregarConfigGithub();
   categoriaSelect.value = categoriasOrdem[0];
+
+  const carregouGithub = await carregarDoGithub();
+  if (carregouGithub) return;
 
   const local = localStorage.getItem('listaMercadoNova');
   if (local) {
-    itens = JSON.parse(local);
+    itens = normalizarLista(JSON.parse(local));
     renderizar();
+    statusSalvar('Lista carregada do dispositivo (localStorage).', true);
     return;
   }
 
   try {
     const resposta = await fetch('data/lista-mercado.json');
     if (!resposta.ok) throw new Error('Falha ao ler JSON inicial');
-    itens = await resposta.json();
+    itens = normalizarLista(await resposta.json());
   } catch {
     itens = [];
   }

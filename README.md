@@ -1,35 +1,41 @@
 # ListaMercadoNova
 
-Site de lista de mercado em HTML/CSS/JS, pronto para publicar no GitHub Pages.
+Site de lista de mercado em HTML/CSS/JS, pronto para GitHub Pages.
 
 ## Funcionalidades
 
-- Tabela com colunas: **Nome do item, Quantidade, Categoria, Valor unitário, Valor total, Carrinho e Remover**.
-- Cadastro de novos itens.
-- Edição em linha de **quantidade, categoria e valor unitário** com recálculo automático.
-- Ordenação por categoria nesta ordem: **Higiene, Mercearia, Congelados, Hortifruti, Outros**.
-- Total geral atualizado automaticamente.
-- Responsivo para web e mobile.
-- Carregamento inicial via arquivo `data/lista-mercado.json`.
-- Persistência local no navegador (`localStorage`).
-- Exportação e importação de JSON para compartilhar/sincronizar os dados entre pessoas.
+- Colunas: **Nome do item, Quantidade, Categoria, Valor unitário, Valor total, Carrinho e Remover**.
+- Inclusão de novos itens.
+- Edição em linha de **quantidade, categoria e valor unitário**, com recálculo automático.
+- Ordenação por categoria: **Higiene, Mercearia, Congelados, Hortifruti, Outros**.
+- Total geral dinâmico.
+- Layout moderno e responsivo (web/mobile).
+- Botão **Salvar e atualizar GitHub** para persistir o arquivo `data/lista-mercado.json` no repositório.
 
-## Sobre salvar para “qualquer um” sem banco de dados
+## Compartilhamento entre dispositivos (sem banco)
 
-No GitHub Pages (site estático), o navegador **não pode gravar diretamente no repositório**. Por isso:
+- Ao abrir o app, ele tenta carregar a lista diretamente do arquivo JSON no GitHub.
+- Ao clicar em **Salvar e atualizar GitHub**, o app faz commit do JSON atualizado usando a API do GitHub.
+- Assim, se você salvar pelo computador, ao abrir no celular verá os mesmos dados atualizados.
 
-- O site lê o arquivo JSON inicial do projeto.
-- Depois salva alterações no navegador local.
-- Para compartilhar com outras pessoas, use **Exportar JSON** e elas podem usar **Importar JSON**.
+## Como configurar
 
-Se quiser salvar globalmente para todos em tempo real, será necessário um backend/API.
+1. Preencha na seção de configuração:
+   - Owner
+   - Repositório
+   - Branch
+   - Caminho (`data/lista-mercado.json`)
+   - Token GitHub com permissão de escrita no repositório
+2. Clique em **Salvar e atualizar GitHub**.
+
+> Observação: por ser um site estático, o token é informado no cliente (navegador). Use token com escopo mínimo necessário.
 
 ## Publicar no GitHub Pages
 
-1. Suba os arquivos para o repositório.
-2. No GitHub, abra **Settings > Pages**.
-3. Em **Build and deployment**, selecione:
+1. Suba o projeto para o GitHub.
+2. Acesse **Settings > Pages**.
+3. Selecione:
    - **Source**: Deploy from a branch
-   - **Branch**: `main` (ou branch desejada), pasta `/root`
-4. A URL ficará no formato:
+   - **Branch**: `main` e pasta `/root`
+4. URL esperada:
    - `https://SEU_USUARIO.github.io/ListaMercadoNova/`
