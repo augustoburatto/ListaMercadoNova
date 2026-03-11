@@ -17,6 +17,11 @@ const githubClientId = "Ov23ctG2HaZ7D2WyoxFG";
 const repo = "ListaMercadoNova";
 const owner = "augustoburatto";
 
+async function loginGitHub() {
+  const url = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&scope=repo`;
+  window.location.href = url;
+}
+
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
