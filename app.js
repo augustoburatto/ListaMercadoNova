@@ -25,6 +25,7 @@ async function loginGitHub() {
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
+console.log(code);
 if(code){
   obterToken(code);
 }
@@ -58,7 +59,7 @@ async function obterTokenOAuth() {
     }
 
   } catch (e) {
-    console.error("Erro ao obter token OAuth", e);
+    statusSalvar("Erro ao obter token OAuth", e);
   }
 }
 
@@ -346,4 +347,5 @@ async function carregarDadosIniciais() {
 }
 
 carregarDadosIniciais();
+
 
