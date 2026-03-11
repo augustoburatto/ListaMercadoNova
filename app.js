@@ -18,8 +18,59 @@ const repo = "ListaMercadoNova";
 const owner = "augustoburatto";
 
 async function loginGitHub() {
-  const url = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&scope=repo`;
-  window.location.href = url;
+  const response = await fetch("https://github.com/login/device/code", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      client_id: githubClientId,
+      scope: "repo"
+    })
+  });
+
+  const data = await response.json();
+
+  alert(
+    `Acesse ${data.verification_uri} e digite o código: ${data.user_code}`
+  );
+
+  verificarToken(data.device_code, data.interval);
+}
+
+async function verificarToken(deviceCode, interval) {
+
+  const clientId = "SEU_CLIENT_ID";
+
+  const timer = setInterval(async () => {
+
+    const response = await fetch("https://github.com/login/oauth/access_token", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        client_id: clientId,
+        device_code: deviceCode,
+        grant_type: "urn:ietf:params:oauth:grant-type:device_code"
+      })
+    });
+
+    const data = await response.json();
+
+    if (data.access_token) {
+
+      clearInterval(timer);
+
+      localStorage.setItem("github_token", data.access_token);
+
+      alert("Login GitHub realizado!");
+
+    }
+
+  }, interval * 1000);
 }
 
 const params = new URLSearchParams(window.location.search);
@@ -76,7 +127,8 @@ async function carregarDoGithub() {
   try {
 
     const headers = {
-      Accept: 'application/vnd.github+json'
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${token}`
     };
 
     if (token) headers.Authorization = `Bearer ${token}`;
@@ -347,5 +399,6 @@ async function carregarDadosIniciais() {
 }
 
 carregarDadosIniciais();
+
 
 
