@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "nome": "Arroz",
+    "quantidade": 2,
+    "categoria": "Mercearia",
+    "valorUnitario": 27.9,
+    "noCarrinho": false
+  },
+  {
+    "id": "2",
+    "nome": "Banana",
+    "quantidade": 12,
+    "categoria": "Hortifruti",
+    "valorUnitario": 0.89,
+    "noCarrinho": true
+  }
+]
