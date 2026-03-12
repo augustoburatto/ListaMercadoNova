@@ -286,7 +286,7 @@ form.addEventListener('submit', (event) => {
 
 salvarArquivoBtn.addEventListener('click', salvarNoGithub);
 
-async function carregarDadosIniciais() {
+async function carregarDadosIniciais(refresh = false) {
   preencherCategorias();
   carregarConfigGithub();
   categoriaSelect.value = categoriasOrdem[0];
@@ -295,7 +295,7 @@ async function carregarDadosIniciais() {
   if (carregouGithub) return;
 
   const local = localStorage.getItem('listaMercadoNova');
-  if (local) {
+  if (local && !refresh) {
     itens = normalizarLista(JSON.parse(local));
     renderizar();
     statusSalvar('Lista carregada do dispositivo (localStorage).', true);
@@ -315,4 +315,5 @@ async function carregarDadosIniciais() {
 }
 
 carregarDadosIniciais();
+
 
