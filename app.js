@@ -290,6 +290,7 @@ async function carregarDadosIniciais(refresh = false) {
   preencherCategorias();
   carregarConfigGithub();
   categoriaSelect.value = categoriasOrdem[0];
+  console.log("teste: " + refresh);
 
   const carregouGithub = await carregarDoGithub();
   if (carregouGithub) return;
@@ -315,5 +316,6 @@ async function carregarDadosIniciais(refresh = false) {
 }
 
 carregarDadosIniciais();
+
 
 
