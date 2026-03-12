@@ -297,10 +297,10 @@ async function carregarDadosIniciais(refresh = false) {
 
   const local = localStorage.getItem('listaMercadoNova');
   if (local && !refresh) {
-    itens = normalizarLista(JSON.parse(local));
-    renderizar();
-    statusSalvar('Lista carregada do dispositivo (localStorage).', true);
-    return;
+    // itens = normalizarLista(JSON.parse(local));
+    // renderizar();
+    // statusSalvar('Lista carregada do dispositivo (localStorage).', true);
+    // return;
   }
 
   try {
@@ -316,6 +316,7 @@ async function carregarDadosIniciais(refresh = false) {
 }
 
 carregarDadosIniciais();
+
 
 
 
