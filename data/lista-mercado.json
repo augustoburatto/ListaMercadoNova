@@ -1,13 +1,5 @@
 [
   {
-    "id": "f98bde46-660d-4d6a-84d0-a4d12216f817",
-    "nome": "Pasta de Dente",
-    "quantidade": 2,
-    "categoria": "Higiene",
-    "valorUnitario": 2,
-    "noCarrinho": false
-  },
-  {
     "id": "472655be-bf07-4265-a5ce-a714ea0574d6",
     "nome": "Sabonete",
     "quantidade": 1,
