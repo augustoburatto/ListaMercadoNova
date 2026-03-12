@@ -134,13 +134,13 @@ function renderizar() {
     tdNome.textContent = item.nome;
 
     const tdQuantidade = document.createElement('td');
-    tdQuantidade.appendChild(criarInputNumero(item, 'quantidade', '0.01', '0.01'));
+    tdQuantidade.appendChild(criarInputNumero(item, 'quantidade', '0', '1'));
 
     const tdCategoria = document.createElement('td');
     tdCategoria.appendChild(criarSelectCategoria(item));
 
     const tdUnitario = document.createElement('td');
-    tdUnitario.appendChild(criarInputNumero(item, 'valorUnitario', '0', '0.01'));
+    tdUnitario.appendChild(criarInputNumero(item, 'valorUnitario', '0', '0.10'));
 
     const tdTotal = document.createElement('td');
     tdTotal.textContent = formatarMoeda(item.quantidade * item.valorUnitario);
@@ -322,6 +322,7 @@ async function carregarDadosIniciais(refresh = false) {
 }
 
 carregarDadosIniciais();
+
 
 
 
