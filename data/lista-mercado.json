@@ -6,5 +6,13 @@
     "categoria": "Higiene",
     "valorUnitario": 2,
     "noCarrinho": false
+  },
+  {
+    "id": "472655be-bf07-4265-a5ce-a714ea0574d6",
+    "nome": "Sabonete",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 2.2,
+    "noCarrinho": false
   }
 ]
