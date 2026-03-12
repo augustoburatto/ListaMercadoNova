@@ -35,6 +35,40 @@ button:hover { background: var(--primary-dark); }
 .btn-secondary { background: #eef2ff; color: var(--primary-dark); border: 1px solid #c7d2fe; }
 .btn-secondary:hover { background: #e0e7ff; }
 
+.btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid #c7d2fe;
+  background: #eef2ff;
+  color: var(--primary-dark);
+  cursor: pointer;
+  transition: transform 0.4s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-refresh svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.4s ease;
+}
+
+.btn-refresh:hover {
+  background: #e0e7ff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.btn-refresh:hover svg {
+  transform: rotate(180deg);
+}
+
+.btn-refresh:active svg {
+  transform: rotate(360deg);
+}
+
 .section-header { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 0.8rem; }
 .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .save-status { margin: 0 0 0.8rem; font-weight: 600; min-height: 1.2rem; }
@@ -57,3 +91,4 @@ td .checkbox { width: 18px; height: 18px; accent-color: var(--success); }
   .item-form, .sync-form { grid-template-columns: 1fr; }
   .section-header { flex-direction: column; align-items: flex-start; }
 }
+
