@@ -6,5 +6,13 @@
     "categoria": "Higiene",
     "valorUnitario": 2.2,
     "noCarrinho": false
+  },
+  {
+    "id": "957ab7be-4a11-4918-9623-57f17aff8252",
+    "nome": "Arroz",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 5,
+    "noCarrinho": false
   }
 ]
