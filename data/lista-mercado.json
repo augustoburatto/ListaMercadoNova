@@ -17,7 +17,7 @@
   },
   {
     "id": "643d570b-52e5-4a76-ba89-3b76a1e8afcd",
-    "nome": "Feijão",
+    "nome": "FeijÃ£o",
     "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 5,
@@ -25,7 +25,7 @@
   },
   {
     "id": "3657f647-adbc-463b-b303-7020d0c74b9f",
-    "nome": "Macarrão",
+    "nome": "MacarrÃ£o",
     "quantidade": 2,
     "categoria": "Mercearia",
     "valorUnitario": 4.5,
@@ -61,6 +61,38 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 15,
+    "noCarrinho": false
+  },
+  {
+    "id": "090cd6be-a1b4-4059-821d-9be80b2f1204",
+    "nome": "Absorvente",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 10,
+    "noCarrinho": false
+  },
+  {
+    "id": "83963eaa-f745-45a9-bc8e-93916151af04",
+    "nome": "Papel toalha",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 7,
+    "noCarrinho": false
+  },
+  {
+    "id": "f2a37eb1-7c22-4a86-aee4-705bcf109a43",
+    "nome": "Sabonete calcinha",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 12,
+    "noCarrinho": false
+  },
+  {
+    "id": "73e8bc8a-95f1-464a-8b9a-76fb29003e04",
+    "nome": "Creme de cabelo",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 18,
     "noCarrinho": false
   }
 ]
