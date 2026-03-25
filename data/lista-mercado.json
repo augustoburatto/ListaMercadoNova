@@ -2,18 +2,18 @@
   {
     "id": "472655be-bf07-4265-a5ce-a714ea0574d6",
     "nome": "Sabonete",
-    "quantidade": 6,
+    "quantidade": 5,
     "categoria": "Higiene",
-    "valorUnitario": 2.2,
-    "noCarrinho": false
+    "valorUnitario": 1.99,
+    "noCarrinho": true
   },
   {
     "id": "957ab7be-4a11-4918-9623-57f17aff8252",
     "nome": "Arroz",
     "quantidade": 3,
     "categoria": "Mercearia",
-    "valorUnitario": 5,
-    "noCarrinho": false
+    "valorUnitario": 3.59,
+    "noCarrinho": true
   },
   {
     "id": "5722a8ab-d141-47a1-ace4-28fceb37c0ff",
@@ -44,8 +44,8 @@
     "nome": "Sabonete liquido",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 15,
-    "noCarrinho": false
+    "valorUnitario": 7.2,
+    "noCarrinho": true
   },
   {
     "id": "090cd6be-a1b4-4059-821d-9be80b2f1204",
@@ -60,8 +60,8 @@
     "nome": "Papel toalha",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 7,
-    "noCarrinho": false
+    "valorUnitario": 4.99,
+    "noCarrinho": true
   },
   {
     "id": "f2a37eb1-7c22-4a86-aee4-705bcf109a43",
@@ -76,8 +76,8 @@
     "nome": "Creme de cabelo",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 18,
-    "noCarrinho": false
+    "valorUnitario": 23.75,
+    "noCarrinho": true
   },
   {
     "id": "1991753a-1e55-4559-9c7e-907caee3b7a8",
@@ -108,16 +108,16 @@
     "nome": "Desodorante",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 10,
-    "noCarrinho": false
+    "valorUnitario": 12.9,
+    "noCarrinho": true
   },
   {
     "id": "a09040f8-3168-42ac-ad2b-212e9993c435",
     "nome": "Feijao",
     "quantidade": 1,
     "categoria": "Mercearia",
-    "valorUnitario": 5,
-    "noCarrinho": false
+    "valorUnitario": 7.99,
+    "noCarrinho": true
   },
   {
     "id": "b50e3e35-2dd8-487e-8780-58d8591b0487",
@@ -237,6 +237,14 @@
     "quantidade": 1,
     "categoria": "Congelados",
     "valorUnitario": 25,
+    "noCarrinho": false
+  },
+  {
+    "id": "a5176c7e-5db9-4658-9bc2-03b0056d2168",
+    "nome": "Fio dental",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 5.9,
     "noCarrinho": false
   }
 ]
