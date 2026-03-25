@@ -20,7 +20,7 @@
     "nome": "Frango",
     "quantidade": 4,
     "categoria": "Congelados",
-    "valorUnitario": 19.9,
+    "valorUnitario": 15.5,
     "noCarrinho": false
   },
   {
@@ -84,7 +84,7 @@
     "nome": "Coisas da Ana",
     "quantidade": 1,
     "categoria": "Congelados",
-    "valorUnitario": 40,
+    "valorUnitario": 19.8,
     "noCarrinho": false
   },
   {
@@ -92,7 +92,7 @@
     "nome": "Manteiga",
     "quantidade": 1,
     "categoria": "Mercearia",
-    "valorUnitario": 10,
+    "valorUnitario": 8,
     "noCarrinho": false
   },
   {
@@ -140,7 +140,7 @@
     "nome": "Batata Frita",
     "quantidade": 1,
     "categoria": "Congelados",
-    "valorUnitario": 25,
+    "valorUnitario": 28,
     "noCarrinho": false
   },
   {
@@ -156,7 +156,7 @@
     "nome": "Leite",
     "quantidade": 6,
     "categoria": "Mercearia",
-    "valorUnitario": 4.5,
+    "valorUnitario": 4.8,
     "noCarrinho": false
   },
   {
@@ -188,7 +188,7 @@
     "nome": "Cream Cheese",
     "quantidade": 1,
     "categoria": "Congelados",
-    "valorUnitario": 35,
+    "valorUnitario": 41.5,
     "noCarrinho": false
   },
   {
@@ -196,8 +196,8 @@
     "nome": "Ketchup",
     "quantidade": 1,
     "categoria": "Mercearia",
-    "valorUnitario": 10,
-    "noCarrinho": false
+    "valorUnitario": 10.7,
+    "noCarrinho": true
   },
   {
     "id": "4ec76ddc-9e3f-4965-9614-675c56f68382",
@@ -220,13 +220,13 @@
     "nome": "Macarrao",
     "quantidade": 2,
     "categoria": "Mercearia",
-    "valorUnitario": 4.5,
+    "valorUnitario": 3.4,
     "noCarrinho": false
   },
   {
     "id": "9716bdbc-58d4-4e6b-8c4b-3fcac7b3edca",
     "nome": "Pao",
-    "quantidade": 5,
+    "quantidade": 2,
     "categoria": "Mercearia",
     "valorUnitario": 8,
     "noCarrinho": false
@@ -236,7 +236,7 @@
     "nome": "Pao de queijo",
     "quantidade": 1,
     "categoria": "Congelados",
-    "valorUnitario": 25,
+    "valorUnitario": 35.7,
     "noCarrinho": false
   },
   {
@@ -285,6 +285,118 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 17,
+    "noCarrinho": false
+  },
+  {
+    "id": "2be49a0d-8f65-4dd3-93e6-1a9ccec8bb3c",
+    "nome": "Biscoito gato",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 6.3,
+    "noCarrinho": false
+  },
+  {
+    "id": "364b8457-bb9a-4839-b815-1444fd3fe137",
+    "nome": "Mi",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 3,
+    "noCarrinho": false
+  },
+  {
+    "id": "8868f50b-d022-47e0-8427-dd335f317e5d",
+    "nome": "Pipoca",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 4.2,
+    "noCarrinho": false
+  },
+  {
+    "id": "fe08cbf2-97c3-4e4c-9b68-d751f3ad7968",
+    "nome": "Tapioca",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 13.9,
+    "noCarrinho": false
+  },
+  {
+    "id": "4cbeb427-b675-471c-bd5b-44b062b5a619",
+    "nome": "Sal",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 2.8,
+    "noCarrinho": false
+  },
+  {
+    "id": "c323af17-4338-4a48-af9c-f3d13900974e",
+    "nome": "Miojo",
+    "quantidade": 3,
+    "categoria": "Higiene",
+    "valorUnitario": 2.8,
+    "noCarrinho": false
+  },
+  {
+    "id": "295ef97a-96e0-447d-893e-0204e57470b2",
+    "nome": "Molho tomate",
+    "quantidade": 4,
+    "categoria": "Higiene",
+    "valorUnitario": 4.2,
+    "noCarrinho": false
+  },
+  {
+    "id": "c003b118-732f-47e7-98e0-2c4f3fc845c1",
+    "nome": "Creme de leite",
+    "quantidade": 5,
+    "categoria": "Higiene",
+    "valorUnitario": 2.3,
+    "noCarrinho": false
+  },
+  {
+    "id": "9e9422c1-1eb5-40e1-9884-3e18ed19ccd1",
+    "nome": "Brownie",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 8.1,
+    "noCarrinho": false
+  },
+  {
+    "id": "48504873-a919-447a-b0fb-a7931754fb32",
+    "nome": "Bolacha serviço",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 5.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "9a048299-f1c2-4d21-8eed-cf630f18a13b",
+    "nome": "Torrada",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 5,
+    "noCarrinho": false
+  },
+  {
+    "id": "b093c4fc-7621-4dfe-af13-6f404650bc4e",
+    "nome": "Trento",
+    "quantidade": 3,
+    "categoria": "Higiene",
+    "valorUnitario": 2.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "90ba3312-d769-40d5-883f-75fab2c3e78e",
+    "nome": "Bacon",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 12.2,
+    "noCarrinho": false
+  },
+  {
+    "id": "14c30f47-5310-4864-981a-c43bf2c6b09c",
+    "nome": "Waffle",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 12.9,
     "noCarrinho": false
   }
 ]
