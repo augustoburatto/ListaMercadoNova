@@ -94,5 +94,29 @@
     "categoria": "Higiene",
     "valorUnitario": 18,
     "noCarrinho": false
+  },
+  {
+    "id": "1991753a-1e55-4559-9c7e-907caee3b7a8",
+    "nome": "Coisas da Ana",
+    "quantidade": 1,
+    "categoria": "Congelados",
+    "valorUnitario": 40,
+    "noCarrinho": false
+  },
+  {
+    "id": "65cceb9c-a53d-47df-a96f-78c2017cf4e6",
+    "nome": "Manteiga",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 10,
+    "noCarrinho": false
+  },
+  {
+    "id": "d8e85839-fa62-4231-b10c-c2100a1ab477",
+    "nome": "Batata palha",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 12,
+    "noCarrinho": false
   }
 ]
