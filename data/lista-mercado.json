@@ -22,5 +22,45 @@
     "categoria": "Mercearia",
     "valorUnitario": 5,
     "noCarrinho": false
+  },
+  {
+    "id": "3657f647-adbc-463b-b303-7020d0c74b9f",
+    "nome": "Macarrão",
+    "quantidade": 2,
+    "categoria": "Mercearia",
+    "valorUnitario": 4.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "5722a8ab-d141-47a1-ace4-28fceb37c0ff",
+    "nome": "Frango",
+    "quantidade": 4,
+    "categoria": "Congelados",
+    "valorUnitario": 19.9,
+    "noCarrinho": false
+  },
+  {
+    "id": "3503def6-cd25-4e4e-93be-52ceb018371a",
+    "nome": "Papel Higienico",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 17,
+    "noCarrinho": false
+  },
+  {
+    "id": "c281340e-4c44-46a5-97e7-9635288e409f",
+    "nome": "Pasta de dente",
+    "quantidade": 2,
+    "categoria": "Higiene",
+    "valorUnitario": 1.4,
+    "noCarrinho": false
+  },
+  {
+    "id": "fb55554f-3f8d-4586-bcfd-ee38b13290de",
+    "nome": "Sabonete liquido",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 15,
+    "noCarrinho": false
   }
 ]
