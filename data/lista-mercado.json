@@ -28,7 +28,7 @@
     "nome": "Papel Higienico",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 17,
+    "valorUnitario": 18.2,
     "noCarrinho": false
   },
   {
@@ -36,8 +36,8 @@
     "nome": "Pasta de dente",
     "quantidade": 2,
     "categoria": "Higiene",
-    "valorUnitario": 1.4,
-    "noCarrinho": false
+    "valorUnitario": 1.69,
+    "noCarrinho": true
   },
   {
     "id": "fb55554f-3f8d-4586-bcfd-ee38b13290de",
@@ -52,7 +52,7 @@
     "nome": "Absorvente",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 10,
+    "valorUnitario": 15.9,
     "noCarrinho": false
   },
   {
@@ -68,7 +68,7 @@
     "nome": "Sabonete calcinha",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 12,
+    "valorUnitario": 19.5,
     "noCarrinho": false
   },
   {
@@ -245,6 +245,14 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 5.9,
+    "noCarrinho": false
+  },
+  {
+    "id": "77b1938d-5944-4847-8199-b61284744f19",
+    "nome": "Escova de dente",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 12.5,
     "noCarrinho": false
   }
 ]
