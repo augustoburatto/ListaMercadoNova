@@ -137,7 +137,7 @@
   },
   {
     "id": "bf3566ba-3c36-45a9-b26e-aabde2fd7056",
-    "nome": "Pão de queijo",
+    "nome": "PÃ£o de queijo",
     "quantidade": 1,
     "categoria": "Congelados",
     "valorUnitario": 25,
@@ -161,7 +161,7 @@
   },
   {
     "id": "6a2538f4-d5f2-482c-8026-b2a48c095a03",
-    "nome": "Pão",
+    "nome": "PÃ£o",
     "quantidade": 5,
     "categoria": "Mercearia",
     "valorUnitario": 8,
@@ -229,6 +229,14 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 7,
+    "noCarrinho": false
+  },
+  {
+    "id": "1a508ba8-fd7c-4211-92ee-fba4d4da425e",
+    "nome": "Macarrao",
+    "quantidade": 2,
+    "categoria": "Mercearia",
+    "valorUnitario": 4.5,
     "noCarrinho": false
   }
 ]
