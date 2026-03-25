@@ -214,5 +214,21 @@
     "categoria": "Mercearia",
     "valorUnitario": 10,
     "noCarrinho": false
+  },
+  {
+    "id": "4ec76ddc-9e3f-4965-9614-675c56f68382",
+    "nome": "Pato",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 12,
+    "noCarrinho": false
+  },
+  {
+    "id": "9d6ce6a7-b647-4c5d-8bd7-55c8d897c3d1",
+    "nome": "Amaciante",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 7,
+    "noCarrinho": false
   }
 ]
