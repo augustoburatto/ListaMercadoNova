@@ -182,5 +182,37 @@
     "categoria": "Mercearia",
     "valorUnitario": 2.2,
     "noCarrinho": false
+  },
+  {
+    "id": "b19ed39d-d00a-45ec-8c1a-30e1bd4baadb",
+    "nome": "Queijo",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 20,
+    "noCarrinho": false
+  },
+  {
+    "id": "52d2dd82-5a67-41db-935d-a7c6ff758591",
+    "nome": "Ovo",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 12,
+    "noCarrinho": false
+  },
+  {
+    "id": "2c3e4d4c-b528-4d41-925a-7b59d72ddba7",
+    "nome": "Cream Cheese",
+    "quantidade": 1,
+    "categoria": "Congelados",
+    "valorUnitario": 35,
+    "noCarrinho": false
+  },
+  {
+    "id": "4e7d25e9-0810-4061-83ce-7232408597d9",
+    "nome": "Ketchup",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 10,
+    "noCarrinho": false
   }
 ]
