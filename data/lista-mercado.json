@@ -69,7 +69,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 19.5,
-    "noCarrinho": false
+    "noCarrinho": true
   },
   {
     "id": "73e8bc8a-95f1-464a-8b9a-76fb29003e04",
@@ -133,7 +133,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 6,
-    "noCarrinho": false
+    "noCarrinho": true
   },
   {
     "id": "e514eaea-ef41-4ffd-8aab-5119375c7e14",
@@ -261,6 +261,30 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 13.9,
+    "noCarrinho": false
+  },
+  {
+    "id": "82360e25-7acb-4c68-9ca1-34e743c18b04",
+    "nome": "Detergente",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 1.9,
+    "noCarrinho": false
+  },
+  {
+    "id": "42bbf8c9-6bc7-40af-af47-194b55b27d56",
+    "nome": "Desengordurante",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 4.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "eef4a72c-6042-4b14-9419-506ed25d4568",
+    "nome": "Pingo",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 17,
     "noCarrinho": false
   }
 ]
