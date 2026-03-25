@@ -29,7 +29,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 18.2,
-    "noCarrinho": false
+    "noCarrinho": true
   },
   {
     "id": "c281340e-4c44-46a5-97e7-9635288e409f",
@@ -53,7 +53,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 15.9,
-    "noCarrinho": false
+    "noCarrinho": true
   },
   {
     "id": "83963eaa-f745-45a9-bc8e-93916151af04",
@@ -204,8 +204,8 @@
     "nome": "Pato",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 12,
-    "noCarrinho": false
+    "valorUnitario": 13.95,
+    "noCarrinho": true
   },
   {
     "id": "9d6ce6a7-b647-4c5d-8bd7-55c8d897c3d1",
@@ -245,7 +245,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 5.9,
-    "noCarrinho": false
+    "noCarrinho": true
   },
   {
     "id": "77b1938d-5944-4847-8199-b61284744f19",
@@ -253,6 +253,14 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 12.5,
+    "noCarrinho": true
+  },
+  {
+    "id": "315b2c85-1cc6-4475-be2e-d5357d1eacec",
+    "nome": "Cheiro privada",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 13.9,
     "noCarrinho": false
   }
 ]
