@@ -16,22 +16,6 @@
     "noCarrinho": false
   },
   {
-    "id": "643d570b-52e5-4a76-ba89-3b76a1e8afcd",
-    "nome": "FeijÃ£o",
-    "quantidade": 1,
-    "categoria": "Mercearia",
-    "valorUnitario": 5,
-    "noCarrinho": false
-  },
-  {
-    "id": "3657f647-adbc-463b-b303-7020d0c74b9f",
-    "nome": "MacarrÃ£o",
-    "quantidade": 2,
-    "categoria": "Mercearia",
-    "valorUnitario": 4.5,
-    "noCarrinho": false
-  },
-  {
     "id": "5722a8ab-d141-47a1-ace4-28fceb37c0ff",
     "nome": "Frango",
     "quantidade": 4,
@@ -117,6 +101,86 @@
     "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 12,
+    "noCarrinho": false
+  },
+  {
+    "id": "1da1a662-1285-48f1-b4a6-029c46d77931",
+    "nome": "Desodorante",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 10,
+    "noCarrinho": false
+  },
+  {
+    "id": "a09040f8-3168-42ac-ad2b-212e9993c435",
+    "nome": "Feijao",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 5,
+    "noCarrinho": false
+  },
+  {
+    "id": "b50e3e35-2dd8-487e-8780-58d8591b0487",
+    "nome": "Maracarrao",
+    "quantidade": 2,
+    "categoria": "Mercearia",
+    "valorUnitario": 4.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "9f0ea0eb-3772-4919-8161-89eb315a035e",
+    "nome": "Bucha pia",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 6,
+    "noCarrinho": false
+  },
+  {
+    "id": "bf3566ba-3c36-45a9-b26e-aabde2fd7056",
+    "nome": "Pão de queijo",
+    "quantidade": 1,
+    "categoria": "Congelados",
+    "valorUnitario": 25,
+    "noCarrinho": false
+  },
+  {
+    "id": "e514eaea-ef41-4ffd-8aab-5119375c7e14",
+    "nome": "Batata Frita",
+    "quantidade": 1,
+    "categoria": "Congelados",
+    "valorUnitario": 25,
+    "noCarrinho": false
+  },
+  {
+    "id": "cca8b208-5444-4376-8c07-0eb102650995",
+    "nome": "Bolacha de Sal",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 5,
+    "noCarrinho": false
+  },
+  {
+    "id": "6a2538f4-d5f2-482c-8026-b2a48c095a03",
+    "nome": "Pão",
+    "quantidade": 5,
+    "categoria": "Mercearia",
+    "valorUnitario": 8,
+    "noCarrinho": false
+  },
+  {
+    "id": "8c7b96af-591a-45f3-a287-7e08229bdb0c",
+    "nome": "Leite",
+    "quantidade": 6,
+    "categoria": "Mercearia",
+    "valorUnitario": 4.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "18f57166-06d1-447b-bcdf-9654f83aca73",
+    "nome": "Creme de Leite",
+    "quantidade": 5,
+    "categoria": "Mercearia",
+    "valorUnitario": 2.2,
     "noCarrinho": false
   }
 ]
