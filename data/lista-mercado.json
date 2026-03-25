@@ -212,8 +212,8 @@
     "nome": "Amaciante",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 7,
-    "noCarrinho": false
+    "valorUnitario": 8.99,
+    "noCarrinho": true
   },
   {
     "id": "1a508ba8-fd7c-4211-92ee-fba4d4da425e",
