@@ -136,14 +136,6 @@
     "noCarrinho": false
   },
   {
-    "id": "bf3566ba-3c36-45a9-b26e-aabde2fd7056",
-    "nome": "PÃ£o de queijo",
-    "quantidade": 1,
-    "categoria": "Congelados",
-    "valorUnitario": 25,
-    "noCarrinho": false
-  },
-  {
     "id": "e514eaea-ef41-4ffd-8aab-5119375c7e14",
     "nome": "Batata Frita",
     "quantidade": 1,
@@ -157,14 +149,6 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 5,
-    "noCarrinho": false
-  },
-  {
-    "id": "6a2538f4-d5f2-482c-8026-b2a48c095a03",
-    "nome": "PÃ£o",
-    "quantidade": 5,
-    "categoria": "Mercearia",
-    "valorUnitario": 8,
     "noCarrinho": false
   },
   {
@@ -237,6 +221,22 @@
     "quantidade": 2,
     "categoria": "Mercearia",
     "valorUnitario": 4.5,
+    "noCarrinho": false
+  },
+  {
+    "id": "9716bdbc-58d4-4e6b-8c4b-3fcac7b3edca",
+    "nome": "Pao",
+    "quantidade": 5,
+    "categoria": "Mercearia",
+    "valorUnitario": 8,
+    "noCarrinho": false
+  },
+  {
+    "id": "12fed9c8-c9c1-4c5c-92d9-6b52a86a679e",
+    "nome": "Pao de queijo",
+    "quantidade": 1,
+    "categoria": "Congelados",
+    "valorUnitario": 25,
     "noCarrinho": false
   }
 ]
