@@ -32,14 +32,6 @@
     "noCarrinho": true
   },
   {
-    "id": "c281340e-4c44-46a5-97e7-9635288e409f",
-    "nome": "Pasta de dente",
-    "quantidade": 2,
-    "categoria": "Higiene",
-    "valorUnitario": 1.69,
-    "noCarrinho": true
-  },
-  {
     "id": "fb55554f-3f8d-4586-bcfd-ee38b13290de",
     "nome": "Sabonete liquido",
     "quantidade": 1,
@@ -48,27 +40,11 @@
     "noCarrinho": true
   },
   {
-    "id": "090cd6be-a1b4-4059-821d-9be80b2f1204",
-    "nome": "Absorvente",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 15.9,
-    "noCarrinho": true
-  },
-  {
     "id": "83963eaa-f745-45a9-bc8e-93916151af04",
     "nome": "Papel toalha",
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 4.99,
-    "noCarrinho": true
-  },
-  {
-    "id": "f2a37eb1-7c22-4a86-aee4-705bcf109a43",
-    "nome": "Sabonete calcinha",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 19.5,
     "noCarrinho": true
   },
   {
@@ -120,14 +96,6 @@
     "noCarrinho": true
   },
   {
-    "id": "b50e3e35-2dd8-487e-8780-58d8591b0487",
-    "nome": "Maracarrao",
-    "quantidade": 2,
-    "categoria": "Mercearia",
-    "valorUnitario": 4.5,
-    "noCarrinho": false
-  },
-  {
     "id": "9f0ea0eb-3772-4919-8161-89eb315a035e",
     "nome": "Bucha pia",
     "quantidade": 1,
@@ -154,7 +122,7 @@
   {
     "id": "8c7b96af-591a-45f3-a287-7e08229bdb0c",
     "nome": "Leite",
-    "quantidade": 6,
+    "quantidade": 5,
     "categoria": "Mercearia",
     "valorUnitario": 4.8,
     "noCarrinho": false
@@ -240,22 +208,6 @@
     "noCarrinho": false
   },
   {
-    "id": "a5176c7e-5db9-4658-9bc2-03b0056d2168",
-    "nome": "Fio dental",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 5.9,
-    "noCarrinho": true
-  },
-  {
-    "id": "77b1938d-5944-4847-8199-b61284744f19",
-    "nome": "Escova de dente",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 12.5,
-    "noCarrinho": true
-  },
-  {
     "id": "315b2c85-1cc6-4475-be2e-d5357d1eacec",
     "nome": "Cheiro privada",
     "quantidade": 1,
@@ -277,22 +229,6 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 4.5,
-    "noCarrinho": false
-  },
-  {
-    "id": "eef4a72c-6042-4b14-9419-506ed25d4568",
-    "nome": "Pingo",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 17,
-    "noCarrinho": false
-  },
-  {
-    "id": "2be49a0d-8f65-4dd3-93e6-1a9ccec8bb3c",
-    "nome": "Biscoito gato",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 6.3,
     "noCarrinho": false
   },
   {
@@ -320,14 +256,6 @@
     "noCarrinho": false
   },
   {
-    "id": "4cbeb427-b675-471c-bd5b-44b062b5a619",
-    "nome": "Sal",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 2.8,
-    "noCarrinho": false
-  },
-  {
     "id": "c323af17-4338-4a48-af9c-f3d13900974e",
     "nome": "Miojo",
     "quantidade": 3,
@@ -352,16 +280,8 @@
     "noCarrinho": false
   },
   {
-    "id": "9e9422c1-1eb5-40e1-9884-3e18ed19ccd1",
-    "nome": "Brownie",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 8.1,
-    "noCarrinho": false
-  },
-  {
     "id": "48504873-a919-447a-b0fb-a7931754fb32",
-    "nome": "Bolacha serviço",
+    "nome": "Bolacha serviÃ§o",
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 5.5,
@@ -376,27 +296,11 @@
     "noCarrinho": false
   },
   {
-    "id": "b093c4fc-7621-4dfe-af13-6f404650bc4e",
-    "nome": "Trento",
-    "quantidade": 3,
-    "categoria": "Higiene",
-    "valorUnitario": 2.5,
-    "noCarrinho": false
-  },
-  {
     "id": "90ba3312-d769-40d5-883f-75fab2c3e78e",
     "nome": "Bacon",
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 12.2,
-    "noCarrinho": false
-  },
-  {
-    "id": "14c30f47-5310-4864-981a-c43bf2c6b09c",
-    "nome": "Waffle",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 12.9,
     "noCarrinho": false
   }
 ]
