@@ -5,7 +5,7 @@
     "quantidade": 5,
     "categoria": "Higiene",
     "valorUnitario": 1.99,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "957ab7be-4a11-4918-9623-57f17aff8252",
@@ -13,7 +13,7 @@
     "quantidade": 3,
     "categoria": "Mercearia",
     "valorUnitario": 3.59,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "5722a8ab-d141-47a1-ace4-28fceb37c0ff",
@@ -29,7 +29,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 18.2,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "fb55554f-3f8d-4586-bcfd-ee38b13290de",
@@ -37,7 +37,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 7.2,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "83963eaa-f745-45a9-bc8e-93916151af04",
@@ -45,7 +45,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 4.99,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "73e8bc8a-95f1-464a-8b9a-76fb29003e04",
@@ -53,7 +53,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 23.75,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "1991753a-1e55-4559-9c7e-907caee3b7a8",
@@ -80,20 +80,12 @@
     "noCarrinho": false
   },
   {
-    "id": "1da1a662-1285-48f1-b4a6-029c46d77931",
-    "nome": "Desodorante",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 12.9,
-    "noCarrinho": true
-  },
-  {
     "id": "a09040f8-3168-42ac-ad2b-212e9993c435",
     "nome": "Feijao",
     "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 7.99,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "9f0ea0eb-3772-4919-8161-89eb315a035e",
@@ -101,7 +93,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 6,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "e514eaea-ef41-4ffd-8aab-5119375c7e14",
@@ -115,7 +107,7 @@
     "id": "cca8b208-5444-4376-8c07-0eb102650995",
     "nome": "Bolacha de Sal",
     "quantidade": 1,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 5,
     "noCarrinho": false
   },
@@ -165,7 +157,7 @@
     "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 10.7,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "4ec76ddc-9e3f-4965-9614-675c56f68382",
@@ -173,15 +165,7 @@
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 13.95,
-    "noCarrinho": true
-  },
-  {
-    "id": "9d6ce6a7-b647-4c5d-8bd7-55c8d897c3d1",
-    "nome": "Amaciante",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 8.99,
-    "noCarrinho": true
+    "noCarrinho": false
   },
   {
     "id": "1a508ba8-fd7c-4211-92ee-fba4d4da425e",
@@ -220,7 +204,7 @@
     "nome": "Detergente",
     "quantidade": 1,
     "categoria": "Higiene",
-    "valorUnitario": 1.9,
+    "valorUnitario": 1.19,
     "noCarrinho": false
   },
   {
@@ -232,18 +216,10 @@
     "noCarrinho": false
   },
   {
-    "id": "364b8457-bb9a-4839-b815-1444fd3fe137",
-    "nome": "Mi",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 3,
-    "noCarrinho": false
-  },
-  {
     "id": "8868f50b-d022-47e0-8427-dd335f317e5d",
     "nome": "Pipoca",
     "quantidade": 1,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 4.2,
     "noCarrinho": false
   },
@@ -251,7 +227,7 @@
     "id": "fe08cbf2-97c3-4e4c-9b68-d751f3ad7968",
     "nome": "Tapioca",
     "quantidade": 1,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 13.9,
     "noCarrinho": false
   },
@@ -259,7 +235,7 @@
     "id": "c323af17-4338-4a48-af9c-f3d13900974e",
     "nome": "Miojo",
     "quantidade": 3,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 2.8,
     "noCarrinho": false
   },
@@ -267,15 +243,15 @@
     "id": "295ef97a-96e0-447d-893e-0204e57470b2",
     "nome": "Molho tomate",
     "quantidade": 4,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 4.2,
     "noCarrinho": false
   },
   {
     "id": "c003b118-732f-47e7-98e0-2c4f3fc845c1",
     "nome": "Creme de leite",
-    "quantidade": 5,
-    "categoria": "Higiene",
+    "quantidade": 2,
+    "categoria": "Mercearia",
     "valorUnitario": 2.3,
     "noCarrinho": false
   },
@@ -283,7 +259,7 @@
     "id": "48504873-a919-447a-b0fb-a7931754fb32",
     "nome": "Bolacha serviÃ§o",
     "quantidade": 1,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 5.5,
     "noCarrinho": false
   },
@@ -291,7 +267,7 @@
     "id": "9a048299-f1c2-4d21-8eed-cf630f18a13b",
     "nome": "Torrada",
     "quantidade": 1,
-    "categoria": "Higiene",
+    "categoria": "Mercearia",
     "valorUnitario": 5,
     "noCarrinho": false
   },
@@ -299,8 +275,16 @@
     "id": "90ba3312-d769-40d5-883f-75fab2c3e78e",
     "nome": "Bacon",
     "quantidade": 1,
-    "categoria": "Higiene",
+    "categoria": "Congelados",
     "valorUnitario": 12.2,
+    "noCarrinho": false
+  },
+  {
+    "id": "2b1b27fb-7fb8-47fa-bdaa-5a14306c63ac",
+    "nome": "Sabao em pó",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 15,
     "noCarrinho": false
   }
 ]
