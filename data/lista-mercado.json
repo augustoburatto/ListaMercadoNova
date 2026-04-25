@@ -48,6 +48,14 @@
     "noCarrinho": false
   },
   {
+    "id": "73e8bc8a-95f1-464a-8b9a-76fb29003e04",
+    "nome": "Creme de cabelo",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 23.75,
+    "noCarrinho": false
+  },
+  {
     "id": "1991753a-1e55-4559-9c7e-907caee3b7a8",
     "nome": "Coisas da Ana",
     "quantidade": 1,
@@ -130,7 +138,7 @@
   {
     "id": "1a508ba8-fd7c-4211-92ee-fba4d4da425e",
     "nome": "Macarrao",
-    "quantidade": 2,
+    "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 3.4,
     "noCarrinho": false
@@ -165,6 +173,14 @@
     "quantidade": 2,
     "categoria": "Higiene",
     "valorUnitario": 1.19,
+    "noCarrinho": false
+  },
+  {
+    "id": "42bbf8c9-6bc7-40af-af47-194b55b27d56",
+    "nome": "Desengordurante",
+    "quantidade": 1,
+    "categoria": "Higiene",
+    "valorUnitario": 4.5,
     "noCarrinho": false
   },
   {
@@ -209,23 +225,23 @@
   },
   {
     "id": "48504873-a919-447a-b0fb-a7931754fb32",
-    "nome": "Bolacha serviÃ§o",
+    "nome": "Bolacha serviÃÂ§o",
     "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 5.5,
     "noCarrinho": false
   },
   {
-    "id": "90ba3312-d769-40d5-883f-75fab2c3e78e",
-    "nome": "Bacon",
+    "id": "9a048299-f1c2-4d21-8eed-cf630f18a13b",
+    "nome": "Torrada",
     "quantidade": 1,
-    "categoria": "Congelados",
-    "valorUnitario": 12.2,
+    "categoria": "Mercearia",
+    "valorUnitario": 5,
     "noCarrinho": false
   },
   {
     "id": "2b1b27fb-7fb8-47fa-bdaa-5a14306c63ac",
-    "nome": "Sabao em pó",
+    "nome": "Sabao em pÃ³",
     "quantidade": 1,
     "categoria": "Higiene",
     "valorUnitario": 15,
@@ -253,38 +269,6 @@
     "quantidade": 1,
     "categoria": "Mercearia",
     "valorUnitario": 10,
-    "noCarrinho": false
-  },
-  {
-    "id": "3b31ef76-5392-4953-8ff4-f5227eed1579",
-    "nome": "Desodorante",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 10,
-    "noCarrinho": false
-  },
-  {
-    "id": "63b1a23a-7045-4e5d-a0aa-0d329384e908",
-    "nome": "Agua sanitaria",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 8,
-    "noCarrinho": false
-  },
-  {
-    "id": "62991cae-ef5d-458f-b6cb-42ee74ed69aa",
-    "nome": "Shampoo Ana",
-    "quantidade": 1,
-    "categoria": "Higiene",
-    "valorUnitario": 20,
-    "noCarrinho": false
-  },
-  {
-    "id": "0f6b8988-fb2d-4aef-90dc-b275b9348c2a",
-    "nome": "Oleo",
-    "quantidade": 1,
-    "categoria": "Mercearia",
-    "valorUnitario": 6,
     "noCarrinho": false
   }
 ]
