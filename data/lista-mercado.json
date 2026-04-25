@@ -254,5 +254,29 @@
     "categoria": "Higiene",
     "valorUnitario": 15,
     "noCarrinho": false
+  },
+  {
+    "id": "1a7cae49-9545-4fcd-84e3-d81585bba20c",
+    "nome": "Hamburguer",
+    "quantidade": 1,
+    "categoria": "Congelados",
+    "valorUnitario": 16,
+    "noCarrinho": false
+  },
+  {
+    "id": "ebdaf838-6e98-4555-890a-6b966bc7427b",
+    "nome": "Pasta de Alho",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 3,
+    "noCarrinho": false
+  },
+  {
+    "id": "893fc009-e8fa-4770-9e4b-79ddacfa1bd4",
+    "nome": "Maionese",
+    "quantidade": 1,
+    "categoria": "Mercearia",
+    "valorUnitario": 10,
+    "noCarrinho": false
   }
 ]
